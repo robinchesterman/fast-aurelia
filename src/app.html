@@ -1,0 +1,30 @@
+<template>
+  <style>
+    fast-design-system-provider {
+      display: inline-block;
+      color: var(--neutral-foreground-rest);
+    }
+  
+    fast-card {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    h2 {
+      font-size: var(--type-ramp-plus-5-font-size);
+      line-height: var(--type-ramp-plus-5-line-height);
+    }
+  
+    fast-card > fast-button{
+      align-self: flex-end;
+    }
+  </style>
+  <fast-design-system-provider use-defaults>
+    <my-element></my-element>
+    <fast-card>
+      <h2>${message}</h2>
+      <fast-button appearance="accent" click.trigger="onClick()">Click Me</fast-button>
+    </fast-card>
+  </fast-design-system-provider>
+</template>
